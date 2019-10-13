@@ -11,7 +11,7 @@
 console.log(sera)
 
 function teste() {
-    // A variavel so fica visivel no escopo da funcao
+    // A variavel so fica invisivel no escopo da funcao
     var local = 123
 }
 
