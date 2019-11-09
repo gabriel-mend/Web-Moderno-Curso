@@ -3,7 +3,8 @@ function tratarErroELancar(erro) {
     // throw 10
     // throw true
     // throw 'mensagem'
-    throw { // object
+    throw { 
+        // object
         nome: erro.name,
         msg: erro.menssage,
         date: new Date
