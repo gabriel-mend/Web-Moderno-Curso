@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>
+        document.querySelector('#primeiro').classList.add('destaque') // Ele espera um seletor css por isso devo passar . ou #
+        const selecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+             // retorna um NodeList que pode usar o foreach 
+        const deselecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque')) 
+        selecionar('div')
+        
+        deselecionar('*')
+        selecionar('.terceiro.ultimo')
+
+        deselecionar('*')
+        selecionar(':not(#primeiro)') //Menos o primeiro
+
+        deselecionar('*')
+        selecionar(':nth-child(1)') // 1 elemento proximo
+
+        deselecionar('*')
+        selecionar('div:nth-of-type(1)') // 1 elemeto do tipo div
+
+        deselecionar('*')
+        selecionar('[wb-attrib]')// Seleciona um atributo
+    </script>
+</body>
+
+</html>
